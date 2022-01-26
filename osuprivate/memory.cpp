@@ -13,4 +13,6 @@ void memory::NopMemory(BYTE* destination, unsigned int size, HANDLE hProcess) {
 	PatchMemory(destination, nopArr, size, hProcess);
 	delete[] nopArr;
 }
+
+void memory::enable_debug_privilege()
 }
