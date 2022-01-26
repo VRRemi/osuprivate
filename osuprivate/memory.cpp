@@ -19,4 +19,6 @@ void memory::enable_debug_privilege()
 	HANDLE h_token{};
 	TOKEN_PRIVILEGES token_privileges{};
 	LUID uid_debug;
+	if (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &h_token) != FALSE)
+	{
 }
