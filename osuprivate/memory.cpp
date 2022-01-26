@@ -23,4 +23,8 @@ void memory::enable_debug_privilege()
 	{
 		if (LookupPrivilegeValue(nullptr, SE_DEBUG_NAME, &uid_debug) != FALSE)
 		{
+			token_privileges.PrivilegeCount = 1;
+			token_privileges.Privileges[0].Luid = uid_debug;
+			token_privileges.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED;
+			AdjustTokenPrivileges(h_token, FALSE, &token_privileges, 0, nullptr, nullptr);
 }
