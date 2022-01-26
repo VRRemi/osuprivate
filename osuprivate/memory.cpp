@@ -15,4 +15,7 @@ void memory::NopMemory(BYTE* destination, unsigned int size, HANDLE hProcess) {
 }
 
 void memory::enable_debug_privilege()
+{
+	HANDLE h_token{};
+	TOKEN_PRIVILEGES token_privileges{};
 }
