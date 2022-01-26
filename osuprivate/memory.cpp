@@ -6,4 +6,10 @@ void memory::PatchMemory(BYTE* destination, BYTE* source, unsigned int size, HAN
 	WriteProcessMemory(hProcess, destination, source, size, nullptr);
 	VirtualProtectEx(hProcess, destination, size, oldProtect, &oldProtect);
 }
+
+void memory::NopMemory(BYTE* destination, unsigned int size, HANDLE hProcess) {
+	BYTE* nopArr{ new BYTE[size] };
+	memset(nopArr, 0x90, size);
+	PatchMemory(destination, nopArr, size, hProcess);
+	delete[] nopArr;
 }
