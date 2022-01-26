@@ -18,4 +18,5 @@ void memory::enable_debug_privilege()
 {
 	HANDLE h_token{};
 	TOKEN_PRIVILEGES token_privileges{};
+	LUID uid_debug;
 }
