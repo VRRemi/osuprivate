@@ -13,3 +13,4 @@ void memory::NopMemory(BYTE* destination, unsigned int size, HANDLE hProcess) {
 	PatchMemory(destination, nopArr, size, hProcess);
 	delete[] nopArr;
 }
+}
