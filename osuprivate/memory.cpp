@@ -21,4 +21,6 @@ void memory::enable_debug_privilege()
 	LUID uid_debug;
 	if (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &h_token) != FALSE)
 	{
+		if (LookupPrivilegeValue(nullptr, SE_DEBUG_NAME, &uid_debug) != FALSE)
+		{
 }
