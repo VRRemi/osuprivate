@@ -19,4 +19,5 @@ DWORD process::getProcessId(const wchar_t* processName) {
 	CloseHandle(hSnap);
 	return procId;
 }
+
 }
