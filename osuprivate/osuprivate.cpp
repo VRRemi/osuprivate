@@ -28,3 +28,9 @@ int main()
 		noErrors = true;
 	}
 	else
+	{
+		system("CLS");
+		std::cout << "Open osu! first!\n";
+		getchar();
+		return 0;
+	}
