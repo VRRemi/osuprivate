@@ -20,4 +20,6 @@ DWORD process::getProcessId(const wchar_t* processName) {
 	return procId;
 }
 
+uintptr_t process::getModuleBaseAddress(DWORD processId, const wchar_t* moduleName) {
+	uintptr_t addr{ 0 };
 }
