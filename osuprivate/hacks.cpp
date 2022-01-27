@@ -7,3 +7,7 @@ void hacks::disableScoreSub(uintptr_t address, HANDLE hProcess) {
 	memory::PatchMemory((BYTE*)address, (BYTE*)"\xC3", 1, hProcess);
 }
 
+void hacks::enableTaikoManiaBypass(uintptr_t address, HANDLE hProcess) {
+	memory::PatchMemory((BYTE*)address, (BYTE*)"\x00", 1, hProcess);
+}
+
