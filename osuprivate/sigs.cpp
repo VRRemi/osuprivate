@@ -13,3 +13,4 @@ uintptr_t sigs::findPattern(HANDLE hProcess, const unsigned char pattern[], cons
 		for (size_t a = 0; a < read_size; a++) {
 			isFound = true;
 
+			for (size_t j = 0; j < signature_size && isFound; j++) {
