@@ -44,5 +44,6 @@ namespace init {
 		system("CLS");
 		std::cout << "private osu! cheat\n";
 		std::cout << "Features:\n";
+		std::cout << "-------------------------------------\n";
 	}
 }
