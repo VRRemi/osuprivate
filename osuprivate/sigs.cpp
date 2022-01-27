@@ -14,3 +14,8 @@ uintptr_t sigs::findPattern(HANDLE hProcess, const unsigned char pattern[], cons
 			isFound = true;
 
 			for (size_t j = 0; j < signature_size && isFound; j++) {
+				if (mask[j] != '?' && chunk[a + j] != pattern[j]) {
+					isFound = false;
+				}
+			}
+
