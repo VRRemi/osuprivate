@@ -43,5 +43,6 @@ namespace init {
 	void DrawChangedMenu(bool isScore, bool isTaikoMania) {
 		system("CLS");
 		std::cout << "private osu! cheat\n";
+		std::cout << "Features:\n";
 	}
 }
