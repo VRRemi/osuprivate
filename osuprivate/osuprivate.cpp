@@ -34,3 +34,16 @@ int main()
 		getchar();
 		return 0;
 	}
+
+	if (noErrors) {
+		std::cout << "Initializing...\n";
+		uintptr_t submitAddress{}, taikomaniaAddress{};
+		DWORD dwExit{ 0 };
+		submitAddress = sigs::findPattern(hProcess, subSignature, "xxxxxxxx?xxxx?????x", 0x0);
+		taikomaniaAddress = sigs::findPattern(hProcess, taikomaniaSignature, "x????xxx?xx?????xx", 0xF);
+		if (submitAddress == 0) {
+			system("CLS");
+			std::cout << "Enter at least 1 map before running cheat!\n";
+			getchar();
+			return 0;
+		}
