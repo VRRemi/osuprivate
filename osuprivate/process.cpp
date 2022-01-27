@@ -30,4 +30,11 @@ uintptr_t process::getModuleBaseAddress(DWORD processId, const wchar_t* moduleNa
 			do {
 				addr = (uintptr_t)modEntry.modBaseAddr;
 				break;
+			} while (Module32Next(hSnap, &modEntry));
+		}
+	}
+	CloseHandle(hSnap);
+	return addr;
+}
+
 }
