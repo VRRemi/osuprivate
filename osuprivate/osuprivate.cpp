@@ -68,3 +68,12 @@ int main()
 				isTaikoMania = true;
 				init::DrawChangedMenu(isScore, isTaikoMania);
 			}
+
+
+			Sleep(20);
+		}
+	}
+	else std::cout << "Error!\n";
+
+	return 0;
+}
