@@ -10,3 +10,6 @@ uintptr_t sigs::findPattern(HANDLE hProcess, const unsigned char pattern[], cons
 	for (size_t i = beginAddress; i < 0x7F000000; i += read_size - signature_size) {
 		ReadProcessMemory(hProcess, LPCVOID(i), &chunk, read_size, nullptr);
 
+		for (size_t a = 0; a < read_size; a++) {
+			isFound = true;
+
