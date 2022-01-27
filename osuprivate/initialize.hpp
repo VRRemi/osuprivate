@@ -35,4 +35,5 @@ namespace init {
 		std::cout << "Features:\n";
 		std::cout << "-------------------------------------\n";
 		std::cout << "Disable score submission []\n";
+		std::cout << "TaikoMania Bypass []\n";
 	}
