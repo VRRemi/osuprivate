@@ -33,4 +33,5 @@ namespace init {
 		SetConsoleTextAttribute(hConsole, 13);
 		std::cout << "private osu! cheat\n";
 		std::cout << "Features:\n";
+		std::cout << "-------------------------------------\n";
 	}
