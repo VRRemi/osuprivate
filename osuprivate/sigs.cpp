@@ -6,3 +6,4 @@ uintptr_t sigs::findPattern(HANDLE hProcess, const unsigned char pattern[], cons
 	bool isFound = false;
 
 	unsigned char chunk[read_size]{};
+
