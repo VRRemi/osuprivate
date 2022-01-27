@@ -8,6 +8,9 @@ DWORD process::getProcessId(const wchar_t* processName) {
 		procEntry.dwSize = sizeof(procEntry);
 		if (Process32First(hSnap, &procEntry)) {
 			do {
+				if (!_wcsicmp(procEntry.szExeFile, processName)) {
+					procId = procEntry.th32ProcessID;
+					break;
 				}
 
 }
