@@ -45,5 +45,6 @@ namespace init {
 		std::cout << "private osu! cheat\n";
 		std::cout << "Features:\n";
 		std::cout << "-------------------------------------\n";
+		std::string scoreSub = (isScore) ? "Disable score submission [x]\n" : "Disable score submission []\n";
 	}
 }
