@@ -14,4 +14,7 @@
 
 int main()
 {
+	
+	bool isScore{ false }, isTaikoMania{ false };
+	init::Initialize();
 }
