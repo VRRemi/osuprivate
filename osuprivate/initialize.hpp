@@ -28,4 +28,7 @@ namespace init {
 	}
 
 	void DrawMenu() {
+		system("CLS");
+		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(hConsole, 13);
 	}
