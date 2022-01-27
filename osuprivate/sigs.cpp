@@ -19,3 +19,9 @@ uintptr_t sigs::findPattern(HANDLE hProcess, const unsigned char pattern[], cons
 				}
 			}
 
+			if (isFound) {
+				return i + a + offset;
+			}
+		}
+	}
+
