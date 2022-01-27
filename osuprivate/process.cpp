@@ -37,4 +37,11 @@ uintptr_t process::getModuleBaseAddress(DWORD processId, const wchar_t* moduleNa
 	return addr;
 }
 
+uintptr_t process::getPointer(HANDLE hProcess, uintptr_t pointer, std::vector<unsigned int> offsets) {
+	uintptr_t addr = pointer;
+	for (unsigned int i{ 0 }; i < offsets.size(); ++i) {
+		ReadProcessMemory(hProcess, (BYTE*)addr, &addr, sizeof(addr), nullptr);
+		addr += offsets[i];
+	}
+	return addr;
 }
