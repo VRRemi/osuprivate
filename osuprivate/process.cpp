@@ -22,4 +22,7 @@ DWORD process::getProcessId(const wchar_t* processName) {
 
 uintptr_t process::getModuleBaseAddress(DWORD processId, const wchar_t* moduleName) {
 	uintptr_t addr{ 0 };
+	HANDLE hSnap{ CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, processId) };
+	if (hSnap != INVALID_HANDLE_VALUE) {
+		MODULEENTRY32 modEntry;
 }
