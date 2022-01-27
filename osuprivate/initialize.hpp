@@ -48,5 +48,6 @@ namespace init {
 		std::string scoreSub = (isScore) ? "Disable score submission [x]\n" : "Disable score submission []\n";
 		std::cout << scoreSub;
 		std::string taikoMania = (isTaikoMania) ? "TaikoMania Bypass [x]\n" : "TaikoMania Bypass []\n";
+		std::cout << taikoMania;
 	}
 }
