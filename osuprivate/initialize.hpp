@@ -46,5 +46,6 @@ namespace init {
 		std::cout << "Features:\n";
 		std::cout << "-------------------------------------\n";
 		std::string scoreSub = (isScore) ? "Disable score submission [x]\n" : "Disable score submission []\n";
+		std::cout << scoreSub;
 	}
 }
