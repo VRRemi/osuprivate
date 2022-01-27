@@ -12,3 +12,6 @@
 #include "hacks.hpp"
 #include <stdlib.h>
 
+int main()
+{
+}
