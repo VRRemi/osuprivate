@@ -27,3 +27,4 @@ int main()
 		moduleBase = process::getModuleBaseAddress(processId, L"osu!.exe");
 		noErrors = true;
 	}
+	else
