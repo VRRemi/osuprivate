@@ -47,3 +47,12 @@ int main()
 			getchar();
 			return 0;
 		}
+		init::DrawMenu();
+		while (GetExitCodeProcess(hProcess, &dwExit) && dwExit == STILL_ACTIVE) {
+			if (GetAsyncKeyState(VK_NUMPAD9) & 1) { return 0; } //click NUM9 to close cheat
+
+			if (GetAsyncKeyState(VK_NUMPAD1) & 1) {
+				hacks::disableScoreSub(submitAddress, hProcess);
+				isScore = true;
+				init::DrawChangedMenu(isScore, isTaikoMania);
+			}
