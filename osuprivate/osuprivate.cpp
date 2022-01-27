@@ -11,10 +11,7 @@
 #include "writereadFunc.hpp"
 #include "hacks.hpp"
 #include <stdlib.h>
-
 int main()
 {
-	
 	bool isScore{ false }, isTaikoMania{ false };
 	init::Initialize();
-}
