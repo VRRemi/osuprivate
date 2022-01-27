@@ -26,3 +26,4 @@ namespace init {
 
 		SetConsoleTitle((LPCWSTR)title.c_str());
 	}
+
