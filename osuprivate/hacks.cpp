@@ -11,3 +11,6 @@ void hacks::enableTaikoManiaBypass(uintptr_t address, HANDLE hProcess) {
 	memory::PatchMemory((BYTE*)address, (BYTE*)"\x00", 1, hProcess);
 }
 
+/*void hacks::disableTaikoManiaBypass(uintptr_t address, HANDLE hProcess) {
+	memory::PatchMemory((BYTE*)address, (BYTE*)"\x01", 1, hProcess);
+}*/
