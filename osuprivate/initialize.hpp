@@ -32,4 +32,5 @@ namespace init {
 		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(hConsole, 13);
 		std::cout << "private osu! cheat\n";
+		std::cout << "Features:\n";
 	}
