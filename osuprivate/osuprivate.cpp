@@ -56,3 +56,9 @@ int main()
 				isScore = true;
 				init::DrawChangedMenu(isScore, isTaikoMania);
 			}
+
+			if (GetAsyncKeyState(VK_NUMPAD2) & 1) {
+				hacks::enableScoreSub(submitAddress, hProcess);
+				isScore = false;
+				init::DrawChangedMenu(isScore, isTaikoMania);
+			}
