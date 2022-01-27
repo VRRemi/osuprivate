@@ -25,4 +25,9 @@ uintptr_t process::getModuleBaseAddress(DWORD processId, const wchar_t* moduleNa
 	HANDLE hSnap{ CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, processId) };
 	if (hSnap != INVALID_HANDLE_VALUE) {
 		MODULEENTRY32 modEntry;
+		modEntry.dwSize = sizeof(modEntry);
+		if (Module32First(hSnap, &modEntry)) {
+			do {
+				addr = (uintptr_t)modEntry.modBaseAddr;
+				break;
 }
