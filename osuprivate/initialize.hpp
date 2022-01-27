@@ -19,3 +19,10 @@ namespace init {
 
 		return str;
 	}
+
+	void Initialize() {
+		std::string title{ random_string(15) };
+		//std::cout<<"Initializing...\n";
+
+		SetConsoleTitle((LPCWSTR)title.c_str());
+	}
