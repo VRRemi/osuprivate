@@ -22,3 +22,8 @@ int main()
 	uintptr_t moduleBase{ 0 };
 	DWORD processId{ process::getProcessId(L"osu!.exe") };
 
+	if (processId) {
+		hProcess = OpenProcess(PROCESS_ALL_ACCESS, NULL, processId);
+		moduleBase = process::getModuleBaseAddress(processId, L"osu!.exe");
+		noErrors = true;
+	}
