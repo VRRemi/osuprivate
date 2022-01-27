@@ -13,4 +13,10 @@ DWORD process::getProcessId(const wchar_t* processName) {
 					break;
 				}
 
+			} while (Process32Next(hSnap, &procEntry));
+		}
+	}
+	CloseHandle(hSnap);
+	return procId;
+}
 }
