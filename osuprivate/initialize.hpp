@@ -50,5 +50,6 @@ namespace init {
 		std::string taikoMania = (isTaikoMania) ? "TaikoMania Bypass [x]\n" : "TaikoMania Bypass []\n";
 		std::cout << taikoMania;
 		std::cout << "-------------------------------------\n";
+		std::cout << "NUMPAD1 - DISABLE SCORE SUBMITTING\nNUMPAD2 - ENABLE SCORE SUBMITTING\nNUMPAD3 - BYPASS TAIKOMANIA DETECTION\nNUMPAD9 - CLOSE CHEAT\n";
 	}
 }
