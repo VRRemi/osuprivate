@@ -62,3 +62,9 @@ int main()
 				isScore = false;
 				init::DrawChangedMenu(isScore, isTaikoMania);
 			}
+
+			if (GetAsyncKeyState(VK_NUMPAD3) & 1) {
+				hacks::enableTaikoManiaBypass(taikomaniaAddress, hProcess);
+				isTaikoMania = true;
+				init::DrawChangedMenu(isScore, isTaikoMania);
+			}
