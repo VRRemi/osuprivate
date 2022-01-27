@@ -34,4 +34,5 @@ namespace init {
 		std::cout << "private osu! cheat\n";
 		std::cout << "Features:\n";
 		std::cout << "-------------------------------------\n";
+		std::cout << "Disable score submission []\n";
 	}
